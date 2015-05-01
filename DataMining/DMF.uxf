@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>216</x>
+      <y>240</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>DataSet
+--
+- trainingData
+- testData
+--
++ getTrainingData( )
++ getTestData( )
+- splitData( )
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>408</x>
+      <y>88</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>CSV (static)
+--
++ ParseCSV( )
+- ReadCSV( )</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>256</x>
+      <y>488</y>
+      <w>192</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>/DataType/
+--
+
+--
+/+ normalize( )/
+/+ compare( first, second )/
+( first and second are indexes )
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>856</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Whole
+--
+- List&lt;int&gt; data
+- total
+--
++ normalize( )
++ compare( first, second )
+- computeMean( )
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>104</x>
+      <y>656</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>/Number/
+--
+- standardDiviation
+--
+/# computeMean( )/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>328</x>
+      <y>672</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Nominal
+--
+- List&lt;string&gt; data
+--
++ compare( first, second )</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>528</x>
+      <y>448</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Knn
+--
+- K
+--
++ train( )
++ classify( )
+- getNeighbors( )
+- isNeighbor( )</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>632</x>
+      <y>256</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Classifier
+--
+- List&lt;DataType&gt; data
+--
++ Classifier( data )
+/+ train( )/
+/+ classify( )/
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>752</x>
+      <y>448</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>DecisionTree
+--
+- tree
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>200</x>
+      <y>856</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Rational
+--
+- List&lt;double&gt; data
+- total
+--
++ normalize( )
++ compare( first, second )
+- computeMean( )
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>536</y>
+      <w>112</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;120;96;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>56</x>
+      <y>784</y>
+      <w>136</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;72;120;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>784</y>
+      <w>136</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>120;72;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>320</x>
+      <y>616</y>
+      <w>104</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>88;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>696</x>
+      <y>384</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>144;64;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>584</x>
+      <y>384</y>
+      <w>152</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;64;136;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>392</x>
+      <y>304</y>
+      <w>256</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+m1=   1..n</panel_attributes>
+    <additional_attributes>24;184;240;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>256</x>
+      <y>368</y>
+      <w>64</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+m1=    1..n</panel_attributes>
+    <additional_attributes>24;120;48;24</additional_attributes>
+  </element>
+</diagram>
