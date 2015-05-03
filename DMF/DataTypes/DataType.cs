@@ -13,9 +13,12 @@ namespace DMF
 
       public abstract void normalize();
       public abstract double compare( int first, int second );
+      public abstract double compare( int first, string second );
+      public abstract double compare( string first, string second );
       public abstract bool isType( string item );
       public abstract void add( object item );
       public abstract void add( string item );
+      public abstract string getAt( int index );
 
       public abstract DataType getNew();
 

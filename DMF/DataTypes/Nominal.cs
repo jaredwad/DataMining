@@ -20,12 +20,21 @@ namespace DMF.DataTypes
 
       public override void normalize()
       {
-         throw new NotImplementedException();
       }
 
       public override double compare( int first, int second )
       {
-         throw new NotImplementedException();
+         return compare( data.ElementAt( first ), data.ElementAt( second ) );
+      }
+
+      public override double compare( int first, string second )
+      {
+         return compare( data.ElementAt( first ), second );
+      }
+
+      public override double compare( string first, string second )
+      {
+         return string.Equals( first, second ) ? 1 : 0;
       }
 
       public override bool isType( string item )
@@ -41,12 +50,16 @@ namespace DMF.DataTypes
       public override void add( string item )
       {
          data.Add( item );
-         Console.WriteLine( "added Nominal item {0}", item );
       }
 
       public override DataType getNew()
       {
          return new Nominal();
+      }
+
+      public override string getAt( int index )
+      {
+         return data.ElementAt( index );
       }
    }
 }

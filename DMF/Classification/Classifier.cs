@@ -19,13 +19,27 @@ namespace DMF.Classification
 
       public abstract bool train();
       public abstract string classify( string[] newRow ); // should another be added here as an int for testing?
+      public abstract string classify( int index );
 
-      public double test( List<DataType> pData )
+      public double test( List<string[]> pData )
       {
          int numCorrect   = 0;
          int numIncorrect = 0;
 
-         //Need to implement a test here
+         foreach(var row in pData) {
+
+            string category = classify( row );
+
+            Console.WriteLine( "Attempted to classify a {0} as a {1}", row[row.Length - 1], category );
+
+            if( category.Equals( row[row.Length - 1] ) ) {
+               numCorrect++;
+            } else {
+               numIncorrect++;
+            }
+         }
+
+            //Need to implement a test here
 
          return ( (double)numCorrect / (double)pData.Count );
       }

@@ -21,12 +21,19 @@ namespace DataMining
               set.Add( temp );
            }
 
+           set = CSV.parseCSV( @"C:\Users\Jared Wadsworth\Documents\Visual Studio 2013\Projects\DataMining\DMF\Data\Iris.csv" );
+
            DataSet ds = new DataSet( set );
 
-           HardCoded hc = new HardCoded( ds.TrainingData );
+           Knn hc = new Knn( ds.TrainingData, 7 );
 
            hc.train();
 
+           double accuracy = hc.test( ds.TestData );
+
+           Console.WriteLine( "Accuracy = {0}", accuracy );
+
+           Console.ReadKey();
         }
     }
 }

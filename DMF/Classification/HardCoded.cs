@@ -17,7 +17,12 @@ namespace DMF.Classification
 
       public override string classify( string[] newRow )
       {
-         return categories.ElementAt(0);
+         return data.ElementAt( data.Count - 1 ).getAt( 0 ); //Returns the first elements type always
+      }
+
+      public override string classify( int index )
+      {
+         throw new NotImplementedException();
       }
    }
 }
