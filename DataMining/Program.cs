@@ -21,7 +21,7 @@ namespace DataMining
               set.Add( temp );
            }
 
-           set = CSV.parseCSV( @"C:\Users\Jared Wadsworth\Documents\Visual Studio 2013\Projects\DataMining\DMF\Data\Iris.csv" );
+           set = CSV.parseCSV( @"C:\Users\Jared Wadsworth\Documents\Visual Studio 2013\Projects\DataMining\DMF\Data\Car.csv" );
 
            DataSet ds = new DataSet( set );
 
