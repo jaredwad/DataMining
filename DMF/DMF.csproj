@@ -41,10 +41,12 @@
   <ItemGroup>
     <Compile Include="Classification\Classifier.cs" />
     <Compile Include="Classification\HardCoded.cs" />
+    <Compile Include="Classification\ID3.cs" />
     <Compile Include="Classification\Knn.cs" />
     <Compile Include="CSV.cs" />
     <Compile Include="DataSet.cs" />
     <Compile Include="DataTypes\DataType.cs" />
+    <Compile Include="DataTypes\Binary.cs" />
     <Compile Include="DataTypes\Nominal.cs" />
     <Compile Include="DataTypes\Number.cs" />
     <Compile Include="DataTypes\Rational.cs" />

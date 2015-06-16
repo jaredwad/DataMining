@@ -6,60 +6,31 @@ using System.Threading.Tasks;
 
 namespace DMF.DataTypes
 {
-   public class Nominal : DataType
+   class Nominal : DataType
    {
-      protected override int Priority { get { return 0; } }
-      public override int Count       { get { return data.Count; } }
-
-      private List<string> data;
-
-      public Nominal()
+      protected override int Priority
       {
-         data = new List<string>();
+         get { return 1; }
       }
 
-      public override void normalize()
+      public override string[] normalize( string[] pData )
       {
-      }
-
-      public override double compare( int first, int second )
-      {
-         return compare( data.ElementAt( first ), data.ElementAt( second ) );
-      }
-
-      public override double compare( int first, string second )
-      {
-         return compare( data.ElementAt( first ), second );
+         return pData;
       }
 
       public override double compare( string first, string second )
       {
-         return string.Equals( first, second ) ? 1 : 0;
+         throw new NotImplementedException();
       }
 
       public override bool isType( string item )
       {
-         return true; // Anything can be nominal
-      }
-
-      public override void add( object item )
-      {
-         data.Add( (string)item );
-      }
-
-      public override void add( string item )
-      {
-         data.Add( item );
+         throw new NotImplementedException();
       }
 
       public override DataType getNew()
       {
-         return new Nominal();
-      }
-
-      public override string getAt( int index )
-      {
-         return data.ElementAt( index );
+         throw new NotImplementedException();
       }
    }
 }

@@ -8,7 +8,7 @@ namespace DMF.DataTypes
 {
    public class Rational : Number
    {
-      protected override int Priority { get { return 1; } }
+      protected override int Priority { get { return 2; } }
       public override int Count       { get { return data.Count; } }
 
       private List<double> data;
